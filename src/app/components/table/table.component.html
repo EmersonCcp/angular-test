@@ -1,0 +1,22 @@
+
+<app-title [title]="'listado de clientes'"></app-title>
+
+<table>
+    <thead>
+        <tr >
+            <th *ngFor="let column of columns">{{column}}</th>
+            <th>Acciones</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        <tr *ngFor="let row of data">
+            <td *ngFor="let key of keys">{{row[key]}}</td>
+            <td>
+                <app-button [title]="'Modificar'"></app-button>
+                <app-button [title]="'Eliminar'"></app-button>
+            </td>
+        </tr>
+    </tbody>
+
+</table>
